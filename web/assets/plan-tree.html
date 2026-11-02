@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>信息管理与信息系统专业培养方案 · 树状解读</title>
+<style>
+  /* 与站内「学涯」萌系基调统一：豆沙绿底 + 奶油白卡片 + 深棕描边 */
+  :root{
+    --bg:#d8e3c6; --panel:#fdfaf0; --panel2:#f4efdd; --border:#d8d4bd; --text:#4a4535; --muted:#6d6a52;
+    --blue:#6b8cae; --blue-soft:#e3ecf4; --green:#7b915c; --green-dk:#5d7143; --green-soft:#dcead0;
+    --orange:#c9883c; --orange-soft:#f7ecd8; --purple:#9a7bc0; --purple-soft:#efe9f7;
+    --red:#c26b64; --red-soft:#f6e2df; --teal:#5fa8a0; --teal-soft:#e0f0ee;
+    --shadow:0 4px 0 rgba(74,69,53,.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;background:var(--bg);color:var(--text);padding:24px 16px 60px;font-size:14px;}
+  .wrap{max-width:980px;margin:0 auto;}
+  header{background:var(--panel);border:3px solid var(--text);border-radius:18px;padding:24px 28px;margin-bottom:18px;box-shadow:var(--shadow);}
+  header h1{font-size:21px;margin-bottom:8px;font-weight:900;color:var(--green-dk);letter-spacing:1px;}
+  header p{font-size:13px;color:var(--muted);line-height:1.7;}
+  .stat-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;}
+  .stat{background:var(--green-soft);border:2px solid var(--text);border-radius:999px;padding:7px 16px;font-size:13px;font-weight:700;}
+  .stat b{font-size:17px;margin-right:4px;color:var(--green-dk);}
+  .toolbar{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap;}
+  .toolbar button{border:2px solid var(--text);background:var(--panel2);border-radius:12px;padding:7px 18px;font-size:13px;font-weight:700;color:var(--text);cursor:pointer;box-shadow:0 3px 0 rgba(74,69,53,.25);transition:transform .12s;}
+  .toolbar button:hover{background:var(--green-soft);transform:translateY(-1px);}
+  .card{background:var(--panel);border:3px solid var(--text);border-radius:18px;padding:12px 16px;margin-bottom:14px;box-shadow:var(--shadow);}
+  /* tree */
+  .node{margin:2px 0;}
+  .node-row{display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:10px;cursor:pointer;user-select:none;}
+  .node-row:hover{background:var(--panel2);}
+  .arrow{width:16px;height:16px;flex:none;transition:transform .18s;color:var(--muted);}
+  .node.closed>.node-row .arrow{transform:rotate(-90deg);}
+  .node.closed>.children{display:none;}
+  .children{margin-left:24px;border-left:2px dashed #cfcbb2;padding-left:10px;}
+  .label{font-size:14.5px;font-weight:600;}
+  .leaf .label{font-weight:400;font-size:13.5px;}
+  .badge{flex:none;font-size:11.5px;border-radius:20px;padding:2px 10px;font-weight:700;border:1.5px solid rgba(74,69,53,.3);}
+  .b-credit{background:var(--blue-soft);color:#4c6c8f;}
+  .b-count{background:#efece0;color:var(--muted);font-weight:600;}
+  .b-must{background:var(--red-soft);color:#a84842;}
+  .b-opt{background:var(--orange-soft);color:#a56a22;}
+  .b-sem{background:var(--teal-soft);color:#3f837b;font-weight:600;}
+  .note{font-size:12.5px;color:var(--muted);line-height:1.7;padding:4px 8px 6px 32px;}
+  .cat-blue>.node-row>.label{color:#4c6c8f;}
+  .cat-green>.node-row>.label{color:var(--green-dk);}
+  .cat-orange>.node-row>.label{color:#a56a22;}
+  .cat-purple>.node-row>.label{color:#7d5fa8;}
+  .cat-teal>.node-row>.label{color:#3f837b;}
+  .cat-red>.node-row>.label{color:#a84842;}
+  .legend{font-size:12px;color:var(--muted);margin:0 4px 10px;line-height:1.8;}
+  footer{font-size:12px;color:var(--muted);text-align:center;margin-top:20px;line-height:1.8;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🧩 信息管理与信息系统专业 · 本科培养方案树状解读</h1>
+    <p>华中农业大学 · 公共管理学院 · 管理科学与工程类 · 2023 版培养方案及指导性修读计划</p>
+    <p>学制四年 · 授管理学学士学位 · 面向信息系统建设与信息管理的复合型人才</p>
+    <div class="stat-row">
+      <div class="stat"><b>151</b>毕业总学分</div>
+      <div class="stat"><b>45</b>实践教学学分</div>
+      <div class="stat"><b>64+</b>学科专业类学分</div>
+      <div class="stat"><b>7</b>门核心课程</div>
+      <div class="stat"><b>8</b>学期修读计划</div>
+    </div>
+  </header>
+
+  <div class="legend">🏷️ <span class="badge b-credit">学分要求</span> <span class="badge b-count">门数</span> <span class="badge b-must">必修</span> <span class="badge b-opt">选修/指定选修</span> <span class="badge b-sem">开课学期</span> &nbsp;· 点击任意条目可展开 / 收起</div>
+  <div class="toolbar">
+    <button onclick="setAll(false)">全部收起</button>
+    <button onclick="setAll(true)">全部展开</button>
+  </div>
+
+  <div class="card" id="tree">
+
+    <!-- 一、课程体系总览 -->
+    <div class="node closed cat-blue">
+      <div class="node-row" onclick="toggle(this)">
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span class="label">八、课程设置与修读要求（16 个最细分类，与选课系统一致）</span>
+        <span class="badge b-count">7 大板块</span>
+      </div>
+      <div class="children">
+
+        <!-- 1 思政 -->
+        <div class="node closed cat-red">
+          <div class="node-row" onclick="toggle(this)">
+            <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span class="label">思想政治理论课程</span><span class="badge b-credit">≥16 学分</span><span class="badge b-count">6 门</span><span class="badge b-must">必修</span>
+          </div>
+          <div class="children">
+            <div class="node leaf"><div class="node-row"><span class="label">思想道德与法治</span><span class="badge b-count">3 学分 · 48 学时</span><span class="badge b-sem">马院</span></div></div>
+            <div class="node leaf"><div class="node-row"><span class="label">中国近现代史纲要</span><span class="badge b-count">3 学分 · 48 学时</span><span class="badge b-sem">马院</span></div></div>
+            <div class="node leaf"><div class="node-row"><span class="label">马克思主义基本原理</span><span class="badge b-count">3 学分 · 48 学时</span><span class="badge b-sem">马院</span></div></div>
+            <div class="node leaf"><div class="node-row"><span class="label">毛泽东思想和中国特色社会主义理论体系概论</span><span class="badge b-count">3 学分 · 48 学时</span><span class="badge b-sem">马院</span></div></div>
+            <div class="node leaf"><div class="node-row"><span class="label">习近平新时代中国特色社会主义思想概论</span><span class="badge b-count">3 学分 · 48 学时</span><span class="badge b-sem">马院</span></div></div>
+            <div class="node leaf"><div class="node-row"><span class="label">形势与政策（一）</span><span class="badge b-count">1 学分 · 16 学时</span><span class="badge b-sem">1-2 学期 · 马院</span></div></div>
+          </div>
+        </div>
+
+        <!-- 2 公共基础 -->
+        <div class="node closed cat-blue">
+          <div class="node-row" onclick="toggle(this)">
+            <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span class="label">公共基础课程</span><span class="badge b-credit">≥26 学分</span>
+          </div>
+          <div class="children">
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">外语类课程</span><span class="badge b-credit">8 学分</span><span class="badge b-count">4 个学期</span>
+              </div>
+              <div class="children">
+                <div class="note">1-4 学期修读完成，每学期 2 学分；详见《华中农业大学公共外语教学改革实施方案》。</div>
+              </div>
+            </div>
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">数学类课程</span><span class="badge b-credit">14 学分</span><span class="badge b-count">4 门</span><span class="badge b-must">必修</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">微积分 B（1）</span><span class="badge b-count">4 学分 · 64 学时</span><span class="badge b-sem">第 1 学期</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">微积分 B（2）</span><span class="badge b-count">4 学分 · 64 学时</span><span class="badge b-sem">第 2 学期</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">线性代数 A</span><span class="badge b-count">3 学分 · 48 学时</span><span class="badge b-sem">第 3 学期</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">概率论与数理统计 B</span><span class="badge b-count">3 学分 · 48 学时</span><span class="badge b-sem">第 3 学期</span></div></div>
+              </div>
+            </div>
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">信息科技类课程</span><span class="badge b-credit">2 学分</span><span class="badge b-count">1 门</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">Python 语言程序设计</span><span class="badge b-count">2 学分 · 46 学时（含实验 30）</span><span class="badge b-sem">第 2 学期 · 信息学院</span></div></div>
+              </div>
+            </div>
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">军事理论</span><span class="badge b-credit">2 学分</span><span class="badge b-count">1 门</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">军事理论（本科）</span><span class="badge b-count">2 学分 · 32 学时</span><span class="badge b-sem">第 1 学期 · 生院</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 体美劳 -->
+        <div class="node closed cat-green">
+          <div class="node-row" onclick="toggle(this)">
+            <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span class="label">体美劳育课程</span><span class="badge b-credit">≥6 学分</span>
+          </div>
+          <div class="children">
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">体育类课程</span><span class="badge b-credit">4 学分</span><span class="badge b-count">4 个学期</span><span class="badge b-opt">选修制</span>
+              </div>
+              <div class="children">
+                <div class="note">一、二年级每学期修满 1 学分（专项 A→E 递进），三年级及以上自由选修；每年须通过《国家学生体质健康标准》测试；游泳含在专项 A 中，须在大一（大一上或大一下）通过游泳技能考核。</div>
+              </div>
+            </div>
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">美育类课程</span><span class="badge b-credit">2 学分</span><span class="badge b-count">1 门</span><span class="badge b-opt">自主选择学期</span>
+              </div>
+              <div class="children"><div class="note">毕业前修读完毕即可，学期自选。</div></div>
+            </div>
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">劳育类课程</span><span class="badge b-credit">≥32 劳动学时</span><span class="badge b-count">1 门</span><span class="badge b-must">必修</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">数字乡村劳动实习（公管）</span><span class="badge b-count">2 学分 · 32 学时（劳动 28）</span><span class="badge b-sem">第 6 学期</span><span class="badge b-opt">不单独计学分</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 通识 -->
+        <div class="node closed cat-orange">
+          <div class="node-row" onclick="toggle(this)">
+            <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span class="label">通识课程</span><span class="badge b-credit">≥9 学分</span>
+          </div>
+          <div class="children">
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">通识课程（指定选修）</span><span class="badge b-credit">4 门 · 各 1 学分</span><span class="badge b-opt">指定选修</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">※ 写作与沟通</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 1-2 学期 · 文法</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">※ 大学生创新创业基础</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 1-2 学期 · 生院</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">※ 大学生心理发展与指导</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 1-2 学期 · 生院</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">※ 大学生心理素质拓展（默认必选）</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 1 学期</span></div></div>
+              </div>
+            </div>
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">通识课程（任选）</span><span class="badge b-credit">≥5 学分</span><span class="badge b-opt">自由选修</span>
+              </div>
+              <div class="children"><div class="note">全校通识任选课，修满剩余学分即可（第 1 学期建议 2 学分、第 2 学期 4 学分、第 7 学期 2 学分）。可用 MOOC 凑：通识 MOOC 最多计 2 学分、原则上一共只能选 2 次；美育课也有 MOOC，但美育＋通识共享额度，合计最多 2 次。</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 学科专业类 -->
+        <div class="node closed cat-purple">
+          <div class="node-row" onclick="toggle(this)">
+            <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span class="label">学科专业类课程</span><span class="badge b-credit">≥64 学分</span>
+          </div>
+          <div class="children">
+
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">学科专业平台课程</span><span class="badge b-credit">23 学分</span><span class="badge b-count">11 门</span><span class="badge b-must">必修</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">管理学原理 B</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 1 学期 · 经管</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">经济学原理</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 1 学期 · 经管</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">管理科学与工程导论</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 2 学期 · 公管</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">信息组织与检索</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 3 学期 · 公管</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">C 语言程序设计</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 3 学期 · 信息</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">Web 设计与开发</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 3 学期 · 公管</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">数据结构 B</span><span class="badge b-count">3 学分</span><span class="badge b-sem">第 4 学期 · 信息</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">JAVA 语言程序设计</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 4 学期 · 信息</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">电子商务概论</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 5 学期 · 公管</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">计算机网络 B</span><span class="badge b-count">3 学分</span><span class="badge b-sem">第 5 学期 · 信息</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">运筹学 B</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 5 学期 · 信息</span></div></div>
+              </div>
+            </div>
+
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">专业核心课程</span><span class="badge b-credit">12 学分</span><span class="badge b-count">7 门</span><span class="badge b-must">必修</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">管理信息系统 A ⭐</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 3 学期 · 公管</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">数据库理论与技术 ⭐</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 4 学期 · 公管</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">信息资源管理 ⭐</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 4 学期 · 公管</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">信息系统分析与设计 ⭐</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 4 学期 · 公管</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">企业资源计划（ERP）⭐</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 5 学期 · 公管</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">IT 项目管理 ⭐</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 5 学期 · 公管</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">信息安全与保密 ⭐</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 6 学期 · 公管</span></div></div>
+                <div class="note">⭐ 七门均为专业核心课：数据库理论与技术、信息资源管理、企业资源计划、信息系统分析与设计、IT 项目管理、信息安全与保密、管理信息系统 A。</div>
+              </div>
+            </div>
+
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">开放性专业选修课程</span><span class="badge b-credit">≥27 学分</span><span class="badge b-count">4 个方向 · 32 门</span><span class="badge b-opt">选修</span>
+              </div>
+              <div class="children">
+                <div class="note">⚠️ 要求在全校范围内自主选择修读<b>交叉类课程不少于 4 学分</b>。</div>
+
+                <div class="node closed">
+                  <div class="node-row" onclick="toggle(this)">
+                    <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    <span class="label">① 信息系统与信息技术类</span><span class="badge b-count">8 门</span>
+                  </div>
+                  <div class="children">
+                    <div class="node leaf"><div class="node-row"><span class="label">机器学习</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 5 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">经济社会系统仿真</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 5 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">数字图像处理技术</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 5 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">操作系统 B</span><span class="badge b-count">3 学分</span><span class="badge b-sem">第 6 学期 · 信息</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">空间信息系统</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 6 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">数据仓库与数据挖掘</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 6 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">软件测试技术与案例实践（校企合作）</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 6 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">物联网技术</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 7 学期</span></div></div>
+                  </div>
+                </div>
+
+                <div class="node closed">
+                  <div class="node-row" onclick="toggle(this)">
+                    <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    <span class="label">② 信息管理与应用类</span><span class="badge b-count">10 门</span>
+                  </div>
+                  <div class="children">
+                    <div class="node leaf"><div class="node-row"><span class="label">信息经济学 A</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 2 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">信息管理与信息系统学科前沿</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 5 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">信息计量学</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 5 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">信息服务与用户</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 6 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">企业运营管理模拟</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 6 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">企业运营管理模拟实验</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 6 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">客户关系管理</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 6 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">知识工程与商务智能</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 6 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">数字工程原理和方法</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 6 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">数字工程原理和方法实验</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 6 学期</span></div></div>
+                  </div>
+                </div>
+
+                <div class="node closed">
+                  <div class="node-row" onclick="toggle(this)">
+                    <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    <span class="label">③ 大数据分析方法与工具类</span><span class="badge b-count">7 门</span>
+                  </div>
+                  <div class="children">
+                    <div class="node leaf"><div class="node-row"><span class="label">数据分析方法与应用</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 3 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">数据分析方法与应用实验</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 3 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">社会统计与 R 语言 A</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 4 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">数学建模 B</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 4 学期 · 信息</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">三维空间信息采集处理及建模（校企合作）</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 5 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">三维空间信息采集处理及建模实验（校企合作）</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 5 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">大数据分析与应用</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 7 学期</span></div></div>
+                  </div>
+                </div>
+
+                <div class="node closed">
+                  <div class="node-row" onclick="toggle(this)">
+                    <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    <span class="label">④ 管理与交叉融合类</span><span class="badge b-count">7 门</span>
+                  </div>
+                  <div class="children">
+                    <div class="node leaf"><div class="node-row"><span class="label">领导力开发</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 2 学期 · 经管</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">商务谈判</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 2 学期 · 经管</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">城市与房地产经济学</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 2 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">会计学（Ⅰ）</span><span class="badge b-count">3 学分</span><span class="badge b-sem">第 3 学期 · 经管</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">组织行为学 B</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 3 学期</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">物流与供应链管理</span><span class="badge b-count">2 学分</span><span class="badge b-sem">第 5 学期 · 经管</span></div></div>
+                    <div class="node leaf"><div class="node-row"><span class="label">财务管理 B</span><span class="badge b-count">3 学分</span><span class="badge b-sem">第 6 学期 · 经管</span></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">国际课程（项目）</span><span class="badge b-credit">≥2 学分</span><span class="badge b-count">1 门示例</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">Agricultural Knowledge and Information Systems</span><span class="badge b-count">2 学分 · 32 学时</span><span class="badge b-sem">第 6 学期 · 公管</span></div></div>
+                <div class="note">还可通过学校暑期课程、国外游学实践、国际竞赛、国际组织实习等形式认定学分。</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 6 实践教学环节 -->
+        <div class="node closed cat-teal">
+          <div class="node-row" onclick="toggle(this)">
+            <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span class="label">实践教学环节</span><span class="badge b-credit">≥30 学分（必修 28 + 指定选修 2）</span>
+          </div>
+          <div class="children">
+
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">公共实践</span><span class="badge b-count">6 项</span><span class="badge b-must">必修</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">军事技能</span><span class="badge b-count">2 学分 · 4 周</span><span class="badge b-sem">第 1 学期</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">形势与政策（二）</span><span class="badge b-count">1 学分 · 30 学时</span><span class="badge b-sem">第 3-8 学期</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">社会实践</span><span class="badge b-count">1 学分 · 2 周</span><span class="badge b-sem">第 3-4 学期</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">美育实践</span><span class="badge b-count">1 学分</span><span class="badge b-sem">第 1-7 学期</span></div></div>
+                <div class="node closed">
+                  <div class="node-row" onclick="toggle(this)">
+                    <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    <span class="label">创新创业实践</span><span class="badge b-count">1 学分 · 课名因人而异</span><span class="badge b-sem">第 1-7 学期</span>
+                  </div>
+                  <div class="children">
+                    <div class="note">方案固定 1 学分，但实际修的课名每个人不一样：创新创业赛事/项目并取得成果、修读"双百案例"课程、创新性实验教学项目、虚拟仿真实验教学项目等（如「××毒物分析与检验技术（创新…」这类课）。导入时课程类别填「创新创业实践」，系统自动归到这个小枝下，计入公共实践的 7 学分。</div>
+                  </div>
+                </div>
+                <div class="node leaf"><div class="node-row"><span class="label">志愿服务</span><span class="badge b-count">1 学分 · 30 学时</span><span class="badge b-sem">第 5-6 学期</span></div></div>
+              </div>
+            </div>
+
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">专业实践</span><span class="badge b-count">理论配套实验 + 集中实践</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">学术道德规范教育</span><span class="badge b-count">1 学分 · 16 学时</span><span class="badge b-sem">第 7 学期</span><span class="badge b-must">必修</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">网站设计与开发实践</span><span class="badge b-count">1 学分 · 1 周</span><span class="badge b-sem">第 4 学期</span><span class="badge b-must">必修</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">数据库理论与技术实验</span><span class="badge b-count">1 学分 · 30 学时</span><span class="badge b-sem">第 4 学期</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">信息系统分析与设计实验</span><span class="badge b-count">1 学分 · 30 学时</span><span class="badge b-sem">第 4 学期</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">数据库应用实践</span><span class="badge b-count">1 学分 · 1 周</span><span class="badge b-sem">第 5 学期</span><span class="badge b-must">必修</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">信息系统开发与维护实践</span><span class="badge b-count">1 学分 · 1 周</span><span class="badge b-sem">第 5 学期</span><span class="badge b-must">必修</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">企业资源计划实验</span><span class="badge b-count">1 学分 · 30 学时</span><span class="badge b-sem">第 5 学期</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">IT 项目管理实验</span><span class="badge b-count">1 学分 · 30 学时</span><span class="badge b-sem">第 5 学期</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">IT 项目管理沙盘模拟实践</span><span class="badge b-count">1 学分 · 1 周</span><span class="badge b-sem">第 6 学期</span><span class="badge b-must">必修</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">网络商务策划与创新实践</span><span class="badge b-count">1 学分 · 1 周</span><span class="badge b-sem">第 6 学期</span><span class="badge b-must">必修</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">信息安全与保密实验</span><span class="badge b-count">1 学分 · 30 学时</span><span class="badge b-sem">第 6 学期</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">※ 农业企业信息化实施与案例实践（校企合作）</span><span class="badge b-count">1 学分 · 1 周</span><span class="badge b-sem">第 6 学期</span><span class="badge b-opt">指定选修</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">※ 经济社会系统仿真实践</span><span class="badge b-count">1 学分 · 1 周</span><span class="badge b-sem">第 6 学期</span><span class="badge b-opt">指定选修</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">教学实习</span><span class="badge b-count">2 学分 · 4 周</span><span class="badge b-sem">第三学年暑假</span><span class="badge b-must">必修</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">毕业实习</span><span class="badge b-count">2 学分 · 4 周</span><span class="badge b-sem">第四学年</span><span class="badge b-must">必修</span></div></div>
+                <div class="node leaf"><div class="node-row"><span class="label">毕业论文（设计）</span><span class="badge b-count">6 学分 · 12 周</span><span class="badge b-sem">第 7-8 学期</span><span class="badge b-must">必修</span></div></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 二、指导性修读计划 -->
+    <div class="node closed cat-green">
+      <div class="node-row" onclick="toggle(this)">
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span class="label">九、指导性修读计划（四年八学期路线图）</span>
+        <span class="badge b-credit">合计 151 学分</span>
+      </div>
+      <div class="children">
+
+        <div class="node closed">
+          <div class="node-row" onclick="toggle(this)">
+            <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span class="label">第一学年</span>
+          </div>
+          <div class="children">
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">第 1 学期（秋季）</span><span class="badge b-credit">21 学分</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">思想道德与法治 3 · 微积分 B(1) 4 · 管理学原理 B 2 · 经济学原理 2 · 军事理论 2 · 军事技能 2 · 大学生心理素质拓展 1 · 外语 2 · 体育 1 · 通识选修 2</span></div></div>
+                <div class="note">通识选修建议：写作与沟通*（1）、大学生创新创业基础*（1）。</div>
+              </div>
+            </div>
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">第 2 学期（春季）</span><span class="badge b-credit">21 学分</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">中国近现代史纲要 3 · 微积分 B(2) 4 · Python 语言程序设计 2 · 形势与政策(一) 1 · 外语 2 · 体育 1 · 通识选修 4 · 专业选修 4</span></div></div>
+                <div class="note">专业选修建议：管理科学与工程导论 1、城市与房地产经济学 2、信息经济学 A 2、领导力开发 2、商务谈判 2。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="node closed">
+          <div class="node-row" onclick="toggle(this)">
+            <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span class="label">第二学年</span>
+          </div>
+          <div class="children">
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">第 3 学期（秋季）</span><span class="badge b-credit">24 学分</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">马克思主义基本原理 3 · 概率论与数理统计 B 3 · 线性代数 A 3 · 管理信息系统 A 2 · 信息组织与检索 2 · C 语言程序设计 2 · Web 设计与开发 2 · 外语 2 · 体育 1 · 专业选修 4</span></div></div>
+                <div class="note">专业选修建议：数据分析方法与应用＋实验（1+1，须同时选）、会计学（Ⅰ）3、组织行为学 B 2。</div>
+              </div>
+            </div>
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">第 4 学期（春季）</span><span class="badge b-credit">26 学分</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">毛泽东思想…概论 3 · 习近平新时代中国特色社会主义思想概论 3 · 数据库理论与技术 2＋实验 1 · 信息资源管理 2 · 信息系统分析与设计 2＋实验 1 · JAVA 2 · 数据结构 B 3 · 网站设计与开发实践 1 · 社会实践 1 · 外语 2 · 体育 1 · 专业选修 2</span></div></div>
+                <div class="note">专业选修建议：数学建模 B 2、社会统计与 R 语言 A 2。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="node closed">
+          <div class="node-row" onclick="toggle(this)">
+            <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span class="label">第三学年</span>
+          </div>
+          <div class="children">
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">第 5 学期（秋季）</span><span class="badge b-credit">23 学分</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">企业资源计划 2＋实验 1 · 计算机网络 B 3 · 运筹学 B 2 · 电子商务概论 2 · IT 项目管理 1＋实验 1 · 信息系统开发与维护实践 1 · 数据库应用实践 1 · 志愿服务 1 · 专业选修 8</span></div></div>
+                <div class="note">专业选修建议：三维空间信息采集处理及建模＋实验（1+1）、数字图像处理技术 2、信息计量学 2、机器学习 2、物流与供应链管理 2。</div>
+              </div>
+            </div>
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">第 6 学期（春季）</span><span class="badge b-credit">22 学分</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">信息安全与保密 1＋实验 1 · IT 项目管理沙盘模拟实践 1 · 网络商务策划与创新实践 1 · 创新创业实践 1 · 数字乡村劳动实习（不计学分）· 教学实习 2（暑假 4 周）· 专业选修 15</span></div></div>
+                <div class="note">专业选修建议：数字工程原理和方法＋实验（1+1）、数据仓库与数据挖掘 2、操作系统 B 3、空间信息系统 2、软件测试 1、企业运营管理模拟＋实验（1+1）、知识工程与商务智能 2、客户关系管理 2、国际课程 2、信息服务与用户 2、财务管理 B 3；指定选修：经济社会系统仿真实践* 1、农业企业信息化实施与案例实践* 1。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="node closed">
+          <div class="node-row" onclick="toggle(this)">
+            <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span class="label">第四学年</span>
+          </div>
+          <div class="children">
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">第 7 学期（秋季）</span><span class="badge b-credit">5 学分</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">学术道德规范教育 1（讲座）· 通识课程 2 · 专业选修 2</span></div></div>
+                <div class="note">专业选修建议：物联网技术 2、大数据分析与应用 2。</div>
+              </div>
+            </div>
+            <div class="node closed">
+              <div class="node-row" onclick="toggle(this)">
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <span class="label">第 8 学期（春季）</span><span class="badge b-credit">9 学分</span>
+              </div>
+              <div class="children">
+                <div class="node leaf"><div class="node-row"><span class="label">毕业实习 2（4 周）· 毕业论文（设计）6（12 周）· 形势与政策（二）1</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 三、目标与要求 -->
+    <div class="node closed cat-orange">
+      <div class="node-row" onclick="toggle(this)">
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span class="label">一~三、培养目标 · 毕业要求 · 对应关系</span>
+        <span class="badge b-count">7 目标 / 9 要求</span>
+      </div>
+      <div class="children">
+        <div class="node closed">
+          <div class="node-row" onclick="toggle(this)"><svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="label">培养目标（7 条）</span></div>
+          <div class="children">
+            <div class="node leaf"><div class="node-row"><span class="label">1 思想品德：政治素质、职业道德、社会责任感与服务三农情怀</span></div></div>
+            <div class="node leaf"><div class="node-row"><span class="label">2 身心素质：语言表达与沟通能力、人文素养、国防与农业信息化意识</span></div></div>
+            <div class="node leaf"><div class="node-row"><span class="label">3 知识基础：数理基础 + 管理学、经济学 + 信息技术理论</span></div></div>
+            <div class="node leaf"><div class="node-row"><span class="label">4 实践能力：信息系统与信息资源开发利用，解决数字乡村等实际问题</span></div></div>
+            <div class="node leaf"><div class="node-row"><span class="label">5 政策法规：熟悉经济管理、信息技术领域的政策、法律、法规与标准</span></div></div>
+            <div class="node leaf"><div class="node-row"><span class="label">6 前沿视野：了解专业理论应用前沿与国民经济信息化趋势</span></div></div>
+            <div class="node leaf"><div class="node-row"><span class="label">7 创新能力：科学研究与实际工作能力、创新创业、全球胜任力、领导力</span></div></div>
+          </div>
+        </div>
+        <div class="node closed">
+          <div class="node-row" onclick="toggle(this)"><svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="label">毕业要求（9 条）</span></div>
+          <div class="children">
+            <div class="node leaf"><div class="node-row"><span class="label">1 家国情怀与服务三农意识　2 世界观与职业道德　3 信息管理/信息系统理论与工具应用　4 数理与数据处理、决策支持基础　5 信息系统分析设计与管理能力　6 科学思维与系统开发、有效沟通　7 建模解释能力与创新创业　8 团队协作与担当　9 跨文化国际视野与交流</span></div></div>
+            <div class="note">三大知识主线：经济与管理 + 计算机科学与技术 + 信息管理与信息系统；培养方案附有"毕业要求↔培养目标"和"课程↔毕业要求"两张对应关系矩阵（H/M/L 支撑强度）。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    依据《2023 年本科培养方案及指导性修读计划（公共管理学院分册）》整理 · 华中农业大学本科生院编印<br>
+    注：分类名称与选课系统截图一致；带 ※ 为指定选修/系统勾选项，⭐ 为专业核心课程。
+  </footer>
+</div>
+
+<script>
+function toggle(row){
+  row.parentElement.classList.toggle('closed');
+  event.stopPropagation();
+}
+function setAll(open){
+  document.querySelectorAll('#tree .node').forEach(n=>{
+    n.classList.toggle('closed', !open);
+  });
+}
+// 默认展开第一层
+document.querySelectorAll('#tree > .node').forEach(n=>n.classList.remove('closed'));
+</script>
+</body>
+</html>

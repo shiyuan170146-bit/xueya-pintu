@@ -1,0 +1,1337 @@
+{
+ "version": "2023",
+ "title": "信息管理与信息系统专业培养方案",
+ "major": "信息管理与信息系统",
+ "school": "华中农业大学 · 公共管理学院",
+ "degree": "管理学学士",
+ "years": 4,
+ "total_credits": 151,
+ "source": "《2023 年本科培养方案及指导性修读计划（公共管理学院分册）》第 22–38 页",
+ "notice": "本站按 2023 版培养方案计算；若你所在年级另有专属方案，一切以教务认定为准。",
+ "term_credits": [
+  21,
+  21,
+  24,
+  26,
+  23,
+  22,
+  5,
+  9
+ ],
+ "term_notes": [
+  "入学第一学期，含通识指定课 2 门",
+  "通识选修 4 学分 + 专业选修 4 学分",
+  "专业选修 4 学分",
+  "专业选修 2 学分（数学建模B / 社会统计与R语言A）",
+  "专业选修 8 学分，专业课压力最大的一学期",
+  "专业选修 15 学分（含国际课程 2 学分），带「＋」的课集中在这里",
+  "学术道德规范教育 1 + 通识 2 + 专业选修 2",
+  "毕业实习 2 + 毕业论文 6 + 形势与政策（二）1"
+ ],
+ "intro": {
+  "POL": {
+   "simple": "6 门思政课，全部必修、学分固定，没有选择空间。",
+   "when": "按第 1→4 学期顺序开，第 4 学期一次上 2 门。",
+   "tips": [
+    "「形势与政策（二）」1 学分不在这里，算在实践教学环节，别重复算进这 16 学分。"
+   ]
+  },
+  "PUB": {
+   "simple": "外语 8 + 数学 14 + 信息科技 2 + 军事理论 2，四块拼起来 26 学分。",
+   "when": "外语限第 1–4 学期内修完；军事理论在第 1 学期；数学集中在前 4 学期。",
+   "tips": [
+    "外语每学期只开约 2 学分，一旦断档后面很难补齐，务必连修 4 学期。"
+   ]
+  },
+  "PEAL": {
+   "simple": "体育 4 + 美育 2，另外劳育 0 学分但要修满 32 学时。",
+   "when": "一、二年级每学期体育 1 学分；美育毕业前修完即可；劳育依托第 6 学期《数字乡村劳动实习》。",
+   "tips": [
+    "游泳考核必须在大一完成（大一上或大一下均可），拖不到后面。",
+    "每年体测必须达标，否则影响毕业。",
+    "劳育不单独计学分，但没完成一样毕不了业。",
+    "美育课可以选 MOOC，但美育和通识共享额度：合计最多 2 次 MOOC、最多计 2 学分。"
+   ]
+  },
+  "GE": {
+   "simple": "四门指定选修（写作与沟通、大学生创新创业基础、大学生心理发展与指导、大学生心理素质拓展）+ 其余任选，合计 ≥9 学分。",
+   "when": "三门指定课要求在第 1–2 学期修完；其余任选不限学期。",
+   "tips": [
+    "指定课没有替代品，前两年就该修掉，拖到后面开课冲突很难补。",
+    "通识任选可以用 MOOC 凑，但通识 MOOC 最多计 2 学分，原则上一共只能选 2 次。",
+    "美育课也有 MOOC 形式，但美育和通识共享同一个额度：两边加起来一共只能选 2 次 MOOC、最多计 2 学分。"
+   ]
+  },
+  "MAJOR": {
+   "simple": "平台课 23 + 专业核心 12 + 开放性专业选修 ≥27 + 国际课程 ≥2，是 151 学分里最大的一块。",
+   "when": "平台课与核心课主要在第 3–6 学期；开放选修分散在各学期，第 5、6 学期最集中。",
+   "tips": [
+    "开放选修里必须含至少 4 学分的「交叉类课程」，不是随便凑够 27 学分就行。",
+    "课表里带「＋」的理论课与实验课必须同时选，漏选一个另一个也失效。",
+    "国际课程 ≥2 学分，可用国际课程 / 暑期课程 / 国外游学 / 国际竞赛等认定。",
+    "指导性计划里开放选修排了约 35 学分，而要求只要 27，多出来的是「选够即可」的余量。"
+   ]
+  },
+  "PRAC": {
+   "simple": "公共实践 7 + 专业实践 16 + 指定选修 2 + 配套实验 5，共 30 学分。",
+   "when": "教学实习在第三年暑假，毕业实习在第四年，毕业论文在第 7–8 学期——都是按时间段开放的。",
+   "tips": [
+    "这些实践环节错过时间窗就要等一整年，是「大四突然差一堆学分」的最常见原因。"
+   ]
+  }
+ },
+ "pitfalls": [
+  {
+   "level": "high",
+   "title": "交叉类课程 ≥4 学分最容易漏",
+   "text": "开放性专业选修不是凑够 27 学分就完事——其中至少 4 学分必须是全校范围的交叉类课程。"
+  },
+  {
+   "level": "high",
+   "title": "带「＋」的课必须成对选",
+   "text": "理论课与配套实验课要求同时修读，第 6 学期集中出现（企业运营管理模拟＋实验、数字工程原理和方法＋实验等）。漏选实验，理论课也一起失效。"
+  },
+  {
+   "level": "mid",
+   "title": "数字乡村劳动实习不单独计学分",
+   "text": "修读计划里注明「不单独计学分」，别把它当成 2 个毕业学分来算，但劳动学时要求必须完成。"
+  },
+  {
+   "level": "low",
+   "title": "版本口径",
+   "text": "本站内置的是 2023 版培养方案。若你所在年级另有专属方案，一切以教务认定为准。"
+  }
+ ],
+ "cats": [
+  {
+   "code": "POL",
+   "name": "思想政治理论课程",
+   "parent_code": null,
+   "required_credits": 16,
+   "note": "含形势与政策（一）（二）",
+   "sort": 1
+  },
+  {
+   "code": "PUB",
+   "name": "公共基础课程",
+   "parent_code": null,
+   "required_credits": 26,
+   "note": null,
+   "sort": 2
+  },
+  {
+   "code": "PEAL",
+   "name": "体美劳育课程",
+   "parent_code": null,
+   "required_credits": 6,
+   "note": null,
+   "sort": 3
+  },
+  {
+   "code": "GE",
+   "name": "通识课程",
+   "parent_code": null,
+   "required_credits": 9,
+   "note": "指定选修4门共4学分+任选5学分（大学生心理素质拓展为默认必选）",
+   "sort": 4
+  },
+  {
+   "code": "MAJOR",
+   "name": "学科专业类课程",
+   "parent_code": null,
+   "required_credits": 64,
+   "note": null,
+   "sort": 5
+  },
+  {
+   "code": "PRAC",
+   "name": "实践教学环节",
+   "parent_code": null,
+   "required_credits": 30,
+   "note": "必修28学分+指定选修2学分",
+   "sort": 6
+  },
+  {
+   "code": "PUB_FL",
+   "name": "外语类课程",
+   "parent_code": "PUB",
+   "required_credits": 8,
+   "note": "1-4学期修读完成，每学期2学分",
+   "sort": 21
+  },
+  {
+   "code": "PUB_MATH",
+   "name": "数学类课程",
+   "parent_code": "PUB",
+   "required_credits": 14,
+   "note": null,
+   "sort": 22
+  },
+  {
+   "code": "PUB_IT",
+   "name": "信息科技类课程",
+   "parent_code": "PUB",
+   "required_credits": 2,
+   "note": null,
+   "sort": 23
+  },
+  {
+   "code": "PUB_MIL",
+   "name": "军事理论",
+   "parent_code": "PUB",
+   "required_credits": 2,
+   "note": null,
+   "sort": 24
+  },
+  {
+   "code": "PEAL_PE",
+   "name": "体育类课程",
+   "parent_code": "PEAL",
+   "required_credits": 4,
+   "note": "一、二年级每学期修1学分",
+   "sort": 31
+  },
+  {
+   "code": "PEAL_AE",
+   "name": "美育类课程",
+   "parent_code": "PEAL",
+   "required_credits": 2,
+   "note": "自主选择学期，毕业前修完",
+   "sort": 32
+  },
+  {
+   "code": "PEAL_LAB",
+   "name": "劳育类课程",
+   "parent_code": "PEAL",
+   "required_credits": null,
+   "note": "不单独计算学分，劳动学时≥32",
+   "sort": 33
+  },
+  {
+   "code": "MAJOR_PLAT",
+   "name": "学科专业平台课程",
+   "parent_code": "MAJOR",
+   "required_credits": 23,
+   "note": null,
+   "sort": 51
+  },
+  {
+   "code": "MAJOR_CORE",
+   "name": "专业核心课程",
+   "parent_code": "MAJOR",
+   "required_credits": 12,
+   "note": null,
+   "sort": 52
+  },
+  {
+   "code": "MAJOR_ELEC",
+   "name": "开放性专业选修课程",
+   "parent_code": "MAJOR",
+   "required_credits": 27,
+   "note": "四子类任选；交叉类课程≥4学分",
+   "sort": 53
+  },
+  {
+   "code": "MAJOR_INTL",
+   "name": "国际课程（项目）",
+   "parent_code": "MAJOR",
+   "required_credits": 2,
+   "note": "可通过国际课程、暑期课程、游学实践等认定",
+   "sort": 54
+  },
+  {
+   "code": "PRAC_PUB",
+   "name": "公共实践",
+   "parent_code": "PRAC",
+   "required_credits": 7,
+   "note": null,
+   "sort": 61
+  },
+  {
+   "code": "PRAC_INNO",
+   "name": "创新创业实践",
+   "parent_code": "PRAC_PUB",
+   "required_credits": null,
+   "note": "方案固定 1 学分的「创新创业实践」：实际修的课名因人而异（各类创新项目、竞赛类课程），导入时课程类别填「创新创业实践」即自动归到这里",
+   "sort": 611
+  },
+  {
+   "code": "PRAC_PRO",
+   "name": "专业实践",
+   "parent_code": "PRAC",
+   "required_credits": 16,
+   "note": "集中实践：学术道德规范教育、数据库应用实践、网站设计与开发实践、信息系统开发与维护实践、IT项目管理沙盘模拟实践、网络商务策划与创新实践、教学实习、毕业实习、毕业论文（设计）",
+   "sort": 62
+  },
+  {
+   "code": "ELEC_IT",
+   "name": "① 信息系统与信息技术类",
+   "parent_code": "MAJOR_ELEC",
+   "required_credits": null,
+   "note": "方向一",
+   "sort": 531
+  },
+  {
+   "code": "ELEC_MGMT",
+   "name": "② 信息管理与应用类",
+   "parent_code": "MAJOR_ELEC",
+   "required_credits": null,
+   "note": "方向二",
+   "sort": 532
+  },
+  {
+   "code": "ELEC_BD",
+   "name": "③ 大数据分析方法与工具类",
+   "parent_code": "MAJOR_ELEC",
+   "required_credits": null,
+   "note": "方向三",
+   "sort": 533
+  },
+  {
+   "code": "ELEC_CROSS",
+   "name": "④ 管理与交叉融合类",
+   "parent_code": "MAJOR_ELEC",
+   "required_credits": null,
+   "note": "方向四",
+   "sort": 534
+  },
+  {
+   "code": "PRAC_OPT",
+   "name": "指定选修",
+   "parent_code": "PRAC_PRO",
+   "required_credits": 2,
+   "note": "农业企业信息化实施与案例实践、经济社会系统仿真实践（2 项 2 学分）",
+   "sort": 621
+  },
+  {
+   "code": "PRAC_LAB",
+   "name": "配套实验",
+   "parent_code": "PRAC_PRO",
+   "required_credits": 5,
+   "note": "专业核心课配套实验（5 项 5 学分）",
+   "sort": 622
+  }
+ ],
+ "courses": [
+  {
+   "code": "315300007100",
+   "name": "数据分析方法与应用",
+   "credits": 1,
+   "sem_from": 3,
+   "sem_to": 3,
+   "category_code": "ELEC_BD",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300009016",
+   "name": "数据分析方法与应用实验",
+   "credits": 1,
+   "sem_from": 3,
+   "sem_to": 3,
+   "category_code": "ELEC_BD",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "3103009058",
+   "name": "数学建模B",
+   "credits": 2,
+   "sem_from": 4,
+   "sem_to": 4,
+   "category_code": "ELEC_BD",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007136",
+   "name": "社会统计与R语言A",
+   "credits": 2,
+   "sem_from": 4,
+   "sem_to": 4,
+   "category_code": "ELEC_BD",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007139",
+   "name": "三维空间信息采集处理及建模(校企合作)",
+   "credits": 1,
+   "sem_from": 5,
+   "sem_to": 5,
+   "category_code": "ELEC_BD",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300009020",
+   "name": "三维空间信息采集处理及建模实验(校企合作)",
+   "credits": 1,
+   "sem_from": 5,
+   "sem_to": 5,
+   "category_code": "ELEC_BD",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007108",
+   "name": "大数据分析与应用",
+   "credits": 2,
+   "sem_from": 7,
+   "sem_to": 7,
+   "category_code": "ELEC_BD",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "3063009190",
+   "name": "商务谈判",
+   "credits": 2,
+   "sem_from": 2,
+   "sem_to": 2,
+   "category_code": "ELEC_CROSS",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "3063009445",
+   "name": "领导力开发",
+   "credits": 2,
+   "sem_from": 2,
+   "sem_to": 2,
+   "category_code": "ELEC_CROSS",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007036",
+   "name": "城市与房地产经济学",
+   "credits": 2,
+   "sem_from": 2,
+   "sem_to": 2,
+   "category_code": "ELEC_CROSS",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "306300007002",
+   "name": "会计学（Ι）",
+   "credits": 3,
+   "sem_from": 3,
+   "sem_to": 3,
+   "category_code": "ELEC_CROSS",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "3063009460",
+   "name": "公共组织管理",
+   "credits": 1,
+   "sem_from": 3,
+   "sem_to": 4,
+   "category_code": "ELEC_CROSS",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "3153009227",
+   "name": "组织行为学B",
+   "credits": 2,
+   "sem_from": 3,
+   "sem_to": 3,
+   "category_code": "ELEC_CROSS",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "3063000184",
+   "name": "物流与供应链管理",
+   "credits": 2,
+   "sem_from": 5,
+   "sem_to": 5,
+   "category_code": "ELEC_CROSS",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "3063009116",
+   "name": "财务管理B",
+   "credits": 3,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "ELEC_CROSS",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007098",
+   "name": "数字图像处理技术",
+   "credits": 2,
+   "sem_from": 5,
+   "sem_to": 5,
+   "category_code": "ELEC_IT",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007122",
+   "name": "机器学习",
+   "credits": 2,
+   "sem_from": 5,
+   "sem_to": 5,
+   "category_code": "ELEC_IT",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "3153009238",
+   "name": "经济社会系统仿真",
+   "credits": 2,
+   "sem_from": 5,
+   "sem_to": 5,
+   "category_code": "ELEC_IT",
+   "nature": "指定选修",
+   "is_generic": false
+  },
+  {
+   "code": "3063009328",
+   "name": "数据仓库与数据挖掘",
+   "credits": 2,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "ELEC_IT",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007010",
+   "name": "空间信息系统",
+   "credits": 2,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "ELEC_IT",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300008012",
+   "name": "软件测试技术与案例实践(校企合作)",
+   "credits": 1,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "ELEC_IT",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "317300007008",
+   "name": "操作系统B",
+   "credits": 3,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "ELEC_IT",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007097",
+   "name": "物联网技术",
+   "credits": 2,
+   "sem_from": 7,
+   "sem_to": 7,
+   "category_code": "ELEC_IT",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007102",
+   "name": "信息经济学A",
+   "credits": 2,
+   "sem_from": 2,
+   "sem_to": 2,
+   "category_code": "ELEC_MGMT",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "3063009358",
+   "name": "信息计量学",
+   "credits": 2,
+   "sem_from": 5,
+   "sem_to": 5,
+   "category_code": "ELEC_MGMT",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007101",
+   "name": "信息管理与信息系统学科前沿",
+   "credits": 1,
+   "sem_from": 5,
+   "sem_to": 5,
+   "category_code": "ELEC_MGMT",
+   "nature": "指定选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007104",
+   "name": "信息服务与用户",
+   "credits": 2,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "ELEC_MGMT",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007106",
+   "name": "企业运营管理模拟",
+   "credits": 1,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "ELEC_MGMT",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007107",
+   "name": "客户关系管理",
+   "credits": 2,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "ELEC_MGMT",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007109",
+   "name": "数字工程原理和方法",
+   "credits": 1,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "ELEC_MGMT",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300009018",
+   "name": "企业运营管理模拟实验",
+   "credits": 1,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "ELEC_MGMT",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300009019",
+   "name": "数字工程原理和方法实验",
+   "credits": 1,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "ELEC_MGMT",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "3153009261",
+   "name": "知识工程与商务智能",
+   "credits": 2,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "ELEC_MGMT",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "3113009824",
+   "name": "写作与沟通",
+   "credits": 1,
+   "sem_from": 1,
+   "sem_to": 1,
+   "category_code": "GE",
+   "nature": "指定选修",
+   "is_generic": false
+  },
+  {
+   "code": "9093009774",
+   "name": "大学生创新创业基础",
+   "credits": 1,
+   "sem_from": 1,
+   "sem_to": 1,
+   "category_code": "GE",
+   "nature": "指定选修",
+   "is_generic": false
+  },
+  {
+   "code": "GE001",
+   "name": "通识选修课程（任选）",
+   "credits": 5,
+   "sem_from": 1,
+   "sem_to": 8,
+   "category_code": "GE",
+   "nature": "选修",
+   "is_generic": true
+  },
+  {
+   "code": "202300006005",
+   "name": "大学生心理发展与指导",
+   "credits": 1,
+   "sem_from": 2,
+   "sem_to": 2,
+   "category_code": "GE",
+   "nature": "指定选修",
+   "is_generic": false
+  },
+  {
+   "code": "3063009313",
+   "name": "管理信息系统A",
+   "credits": 2,
+   "sem_from": 3,
+   "sem_to": 3,
+   "category_code": "MAJOR_CORE",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007092",
+   "name": "信息系统分析与设计",
+   "credits": 2,
+   "sem_from": 4,
+   "sem_to": 4,
+   "category_code": "MAJOR_CORE",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "3153009247",
+   "name": "数据库理论与技术",
+   "credits": 2,
+   "sem_from": 4,
+   "sem_to": 4,
+   "category_code": "MAJOR_CORE",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "3153009306",
+   "name": "信息资源管理",
+   "credits": 2,
+   "sem_from": 4,
+   "sem_to": 4,
+   "category_code": "MAJOR_CORE",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "3063009366",
+   "name": "企业资源计划",
+   "credits": 2,
+   "sem_from": 5,
+   "sem_to": 5,
+   "category_code": "MAJOR_CORE",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007094",
+   "name": "IT项目管理",
+   "credits": 1,
+   "sem_from": 5,
+   "sem_to": 5,
+   "category_code": "MAJOR_CORE",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007095",
+   "name": "信息安全与保密",
+   "credits": 1,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "MAJOR_CORE",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "MAJOR_INTL",
+   "name": "国际课程（项目）（任选）",
+   "credits": 2,
+   "sem_from": 1,
+   "sem_to": 8,
+   "category_code": "MAJOR_INTL",
+   "nature": "选修",
+   "is_generic": true
+  },
+  {
+   "code": "315300003008",
+   "name": "Agricultural Knowledge and Information Systems",
+   "credits": 2,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "MAJOR_INTL",
+   "nature": "选修",
+   "is_generic": false
+  },
+  {
+   "code": "306300007010",
+   "name": "经济学原理",
+   "credits": 2,
+   "sem_from": 1,
+   "sem_to": 1,
+   "category_code": "MAJOR_PLAT",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007022",
+   "name": "管理学原理B",
+   "credits": 2,
+   "sem_from": 1,
+   "sem_to": 1,
+   "category_code": "MAJOR_PLAT",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007063",
+   "name": "管理科学与工程导论",
+   "credits": 1,
+   "sem_from": 2,
+   "sem_to": 2,
+   "category_code": "MAJOR_PLAT",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007091",
+   "name": "Web设计与开发",
+   "credits": 2,
+   "sem_from": 3,
+   "sem_to": 3,
+   "category_code": "MAJOR_PLAT",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "3153009258",
+   "name": "信息组织与检索",
+   "credits": 2,
+   "sem_from": 3,
+   "sem_to": 3,
+   "category_code": "MAJOR_PLAT",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "3173009118",
+   "name": "C语言程序设计",
+   "credits": 2,
+   "sem_from": 3,
+   "sem_to": 3,
+   "category_code": "MAJOR_PLAT",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "317300007010",
+   "name": "数据结构B",
+   "credits": 3,
+   "sem_from": 4,
+   "sem_to": 4,
+   "category_code": "MAJOR_PLAT",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "317300007024",
+   "name": "JAVA语言程序设计",
+   "credits": 2,
+   "sem_from": 4,
+   "sem_to": 4,
+   "category_code": "MAJOR_PLAT",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "3103000143",
+   "name": "运筹学B",
+   "credits": 2,
+   "sem_from": 5,
+   "sem_to": 5,
+   "category_code": "MAJOR_PLAT",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007090",
+   "name": "电子商务概论",
+   "credits": 2,
+   "sem_from": 5,
+   "sem_to": 5,
+   "category_code": "MAJOR_PLAT",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "317300007004",
+   "name": "计算机网络B",
+   "credits": 3,
+   "sem_from": 5,
+   "sem_to": 5,
+   "category_code": "MAJOR_PLAT",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "AE001",
+   "name": "美育类课程（任选）",
+   "credits": 2,
+   "sem_from": 1,
+   "sem_to": 8,
+   "category_code": "PEAL_AE",
+   "nature": "选修",
+   "is_generic": true
+  },
+  {
+   "code": "315300008021",
+   "name": "数字乡村劳动实习",
+   "credits": 2,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "PEAL_LAB",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "PE001",
+   "name": "体育（一）",
+   "credits": 1,
+   "sem_from": 1,
+   "sem_to": 1,
+   "category_code": "PEAL_PE",
+   "nature": "必修",
+   "is_generic": true
+  },
+  {
+   "code": "PE002",
+   "name": "体育（二）",
+   "credits": 1,
+   "sem_from": 2,
+   "sem_to": 2,
+   "category_code": "PEAL_PE",
+   "nature": "必修",
+   "is_generic": true
+  },
+  {
+   "code": "PE003",
+   "name": "体育（三）",
+   "credits": 1,
+   "sem_from": 3,
+   "sem_to": 3,
+   "category_code": "PEAL_PE",
+   "nature": "必修",
+   "is_generic": true
+  },
+  {
+   "code": "PE004",
+   "name": "体育（四）",
+   "credits": 1,
+   "sem_from": 4,
+   "sem_to": 4,
+   "category_code": "PEAL_PE",
+   "nature": "必修",
+   "is_generic": true
+  },
+  {
+   "code": "314300001006",
+   "name": "思想道德与法治",
+   "credits": 3,
+   "sem_from": 1,
+   "sem_to": 1,
+   "category_code": "POL",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "3143009104",
+   "name": "形势与政策（一）",
+   "credits": 1,
+   "sem_from": 1,
+   "sem_to": 2,
+   "category_code": "POL",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "3143009003",
+   "name": "中国近现代史纲要",
+   "credits": 3,
+   "sem_from": 2,
+   "sem_to": 2,
+   "category_code": "POL",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "314300001007",
+   "name": "马克思主义基本原理",
+   "credits": 3,
+   "sem_from": 3,
+   "sem_to": 3,
+   "category_code": "POL",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "314300001008",
+   "name": "毛泽东思想和中国特色社会主义理论体系概论",
+   "credits": 3,
+   "sem_from": 4,
+   "sem_to": 4,
+   "category_code": "POL",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "314300001009",
+   "name": "习近平新时代中国特色社会主义思想概论",
+   "credits": 3,
+   "sem_from": 4,
+   "sem_to": 4,
+   "category_code": "POL",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "315300009011",
+   "name": "数据库理论与技术实验",
+   "credits": 1,
+   "sem_from": 4,
+   "sem_to": 4,
+   "category_code": "PRAC_LAB",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "315300009013",
+   "name": "信息系统分析与设计实验",
+   "credits": 1,
+   "sem_from": 4,
+   "sem_to": 4,
+   "category_code": "PRAC_LAB",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "315300009012",
+   "name": "企业资源计划实验",
+   "credits": 1,
+   "sem_from": 5,
+   "sem_to": 5,
+   "category_code": "PRAC_LAB",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "315300009014",
+   "name": "IT项目管理实验",
+   "credits": 1,
+   "sem_from": 5,
+   "sem_to": 5,
+   "category_code": "PRAC_LAB",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "315300009015",
+   "name": "信息安全与保密实验",
+   "credits": 1,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "PRAC_LAB",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "315300008011",
+   "name": "农业企业信息化实施与案例实践(校企合作)",
+   "credits": 1,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "PRAC_OPT",
+   "nature": "指定选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300008013",
+   "name": "经济社会系统仿真实践",
+   "credits": 1,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "PRAC_OPT",
+   "nature": "指定选修",
+   "is_generic": false
+  },
+  {
+   "code": "315300008010",
+   "name": "网站设计与开发实践",
+   "credits": 1,
+   "sem_from": 4,
+   "sem_to": 4,
+   "category_code": "PRAC_PRO",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "3063009915",
+   "name": "信息系统开发与维护实践",
+   "credits": 1,
+   "sem_from": 5,
+   "sem_to": 5,
+   "category_code": "PRAC_PRO",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "315300008009",
+   "name": "数据库应用实践",
+   "credits": 1,
+   "sem_from": 5,
+   "sem_to": 5,
+   "category_code": "PRAC_PRO",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "315300008014",
+   "name": "网络商务策划与创新实践",
+   "credits": 1,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "PRAC_PRO",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "315300008026",
+   "name": "IT项目管理沙盘模拟实践",
+   "credits": 1,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "PRAC_PRO",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "3153009930",
+   "name": "教学实习",
+   "credits": 2,
+   "sem_from": 6,
+   "sem_to": 6,
+   "category_code": "PRAC_PRO",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "315300007085",
+   "name": "学术道德规范教育",
+   "credits": 1,
+   "sem_from": 7,
+   "sem_to": 7,
+   "category_code": "PRAC_PRO",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "3153009932",
+   "name": "毕业论文（设计）",
+   "credits": 6,
+   "sem_from": 7,
+   "sem_to": 8,
+   "category_code": "PRAC_PRO",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "3153009931",
+   "name": "毕业实习",
+   "credits": 2,
+   "sem_from": 8,
+   "sem_to": 8,
+   "category_code": "PRAC_PRO",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "110300008002",
+   "name": "美育实践",
+   "credits": 1,
+   "sem_from": 1,
+   "sem_to": 7,
+   "category_code": "PRAC_PUB",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "202300008001",
+   "name": "大学生心理素质拓展",
+   "credits": 1,
+   "sem_from": 1,
+   "sem_to": 1,
+   "category_code": "GE",
+   "nature": "指定选修",
+   "is_generic": false
+  },
+  {
+   "code": "9093009905",
+   "name": "军事技能",
+   "credits": 2,
+   "sem_from": 1,
+   "sem_to": 1,
+   "category_code": "PRAC_PUB",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "9093009906",
+   "name": "创新创业实践",
+   "credits": 1,
+   "sem_from": 1,
+   "sem_to": 7,
+   "category_code": "PRAC_INNO",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "3143009105",
+   "name": "形势与政策（二）",
+   "credits": 1,
+   "sem_from": 3,
+   "sem_to": 8,
+   "category_code": "PRAC_PUB",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "9093009903",
+   "name": "社会实践",
+   "credits": 1,
+   "sem_from": 3,
+   "sem_to": 4,
+   "category_code": "PRAC_PUB",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "110300008001",
+   "name": "志愿服务",
+   "credits": 1,
+   "sem_from": 5,
+   "sem_to": 6,
+   "category_code": "PRAC_PUB",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "FL001",
+   "name": "大学外语（一）",
+   "credits": 2,
+   "sem_from": 1,
+   "sem_to": 1,
+   "category_code": "PUB_FL",
+   "nature": "必修",
+   "is_generic": true
+  },
+  {
+   "code": "FL002",
+   "name": "大学外语（二）",
+   "credits": 2,
+   "sem_from": 2,
+   "sem_to": 2,
+   "category_code": "PUB_FL",
+   "nature": "必修",
+   "is_generic": true
+  },
+  {
+   "code": "FL003",
+   "name": "大学外语（三）",
+   "credits": 2,
+   "sem_from": 3,
+   "sem_to": 3,
+   "category_code": "PUB_FL",
+   "nature": "必修",
+   "is_generic": true
+  },
+  {
+   "code": "FL004",
+   "name": "大学外语（四）",
+   "credits": 2,
+   "sem_from": 4,
+   "sem_to": 4,
+   "category_code": "PUB_FL",
+   "nature": "必修",
+   "is_generic": true
+  },
+  {
+   "code": "3173009119",
+   "name": "Python语言程序设计",
+   "credits": 2,
+   "sem_from": 2,
+   "sem_to": 2,
+   "category_code": "PUB_IT",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "310300001018",
+   "name": "微积分B（1）",
+   "credits": 4,
+   "sem_from": 1,
+   "sem_to": 1,
+   "category_code": "PUB_MATH",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "310300001033",
+   "name": "微积分B（2）",
+   "credits": 4,
+   "sem_from": 2,
+   "sem_to": 2,
+   "category_code": "PUB_MATH",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "310300001022",
+   "name": "概率论与数理统计B",
+   "credits": 3,
+   "sem_from": 3,
+   "sem_to": 3,
+   "category_code": "PUB_MATH",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "310300001024",
+   "name": "线性代数A",
+   "credits": 3,
+   "sem_from": 3,
+   "sem_to": 3,
+   "category_code": "PUB_MATH",
+   "nature": "必修",
+   "is_generic": false
+  },
+  {
+   "code": "9093009904",
+   "name": "军事理论",
+   "credits": 2,
+   "sem_from": 1,
+   "sem_to": 1,
+   "category_code": "PUB_MIL",
+   "nature": "必修",
+   "is_generic": false
+  }
+ ]
+}

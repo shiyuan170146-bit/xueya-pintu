@@ -1,0 +1,877 @@
+{
+ "version": "2023",
+ "title": "土地资源管理专业培养方案",
+ "major": "土地资源管理",
+ "school": "华中农业大学 · 公共管理学院",
+ "degree": "管理学学士",
+ "years": 4,
+ "total_credits": 145,
+ "source": "《2023 年本科培养方案及指导性修读计划（公共管理学院分册）》",
+ "notice": "本站按 2023 版培养方案计算；若你所在年级另有专属方案，一切以教务认定为准。",
+ "term_credits": [
+  14.0,
+  11.0,
+  7.0,
+  4.0,
+  13.0,
+  4.0,
+  0.0,
+  0.0
+ ],
+ "term_notes": [
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
+ ],
+ "intro": {},
+ "pitfalls": [],
+ "cats": [
+  {
+   "code": "POL",
+   "name": "思想政治理论课程",
+   "sort": 1,
+   "required_credits": 16
+  },
+  {
+   "code": "PUB",
+   "name": "公共基础课程",
+   "sort": 2,
+   "required_credits": 28
+  },
+  {
+   "code": "PUB_FL",
+   "name": "外语类课程",
+   "sort": 3,
+   "parent_code": "PUB",
+   "required_credits": 8
+  },
+  {
+   "code": "PUB_MATH",
+   "name": "数理化类课程",
+   "sort": 4,
+   "parent_code": "PUB",
+   "required_credits": 15
+  },
+  {
+   "code": "PUB_IT",
+   "name": "信息科技类课程",
+   "sort": 5,
+   "parent_code": "PUB",
+   "required_credits": 2
+  },
+  {
+   "code": "PUB_ENG",
+   "name": "工程科技类课程",
+   "sort": 6,
+   "parent_code": "PUB",
+   "required_credits": 1
+  },
+  {
+   "code": "PUB_MIL",
+   "name": "军事理论",
+   "sort": 7,
+   "parent_code": "PUB",
+   "required_credits": 2
+  },
+  {
+   "code": "PEAL",
+   "name": "体美劳育课程",
+   "sort": 8,
+   "required_credits": 6
+  },
+  {
+   "code": "PEAL_PE",
+   "name": "体育类课程",
+   "sort": 9,
+   "parent_code": "PEAL",
+   "required_credits": 4
+  },
+  {
+   "code": "PEAL_AE",
+   "name": "美育类课程",
+   "sort": 10,
+   "parent_code": "PEAL",
+   "required_credits": 2
+  },
+  {
+   "code": "PEAL_LAB",
+   "name": "劳育类课程",
+   "sort": 11,
+   "parent_code": "PEAL",
+   "required_credits": 0
+  },
+  {
+   "code": "GE",
+   "name": "通识课程",
+   "sort": 12,
+   "required_credits": 8
+  },
+  {
+   "code": "MAJOR",
+   "name": "学科专业类课程",
+   "sort": 13,
+   "required_credits": 65
+  },
+  {
+   "code": "MAJOR_PLAT",
+   "name": "学科专业平台课程",
+   "sort": 14,
+   "parent_code": "MAJOR",
+   "required_credits": 12
+  },
+  {
+   "code": "MAJOR_CORE",
+   "name": "专业核心课程",
+   "sort": 15,
+   "parent_code": "MAJOR",
+   "required_credits": 19
+  },
+  {
+   "code": "MAJOR_ELEC",
+   "name": "开放性专业选修课程",
+   "sort": 16,
+   "parent_code": "MAJOR",
+   "required_credits": 32
+  },
+  {
+   "code": "MAJOR_INTL",
+   "name": "国际课程（项目）",
+   "sort": 17,
+   "parent_code": "MAJOR",
+   "required_credits": 2
+  },
+  {
+   "code": "PRAC",
+   "name": "实践教学环节",
+   "sort": 18,
+   "required_credits": 22
+  }
+ ],
+ "courses": [
+  {
+   "code": "314300001006",
+   "name": "思想道德与法治",
+   "credits": 3.0,
+   "category_code": "POL",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 8
+  },
+  {
+   "code": "3143009003",
+   "name": "中国近现代史纲要",
+   "credits": 3.0,
+   "category_code": "POL",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 8
+  },
+  {
+   "code": "314300001007",
+   "name": "马克思主义基本原理",
+   "credits": 3.0,
+   "category_code": "POL",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 8
+  },
+  {
+   "code": "314300001008",
+   "name": "毛泽东思想和中国特色社会主义理论体系概论",
+   "credits": 3.0,
+   "category_code": "POL",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 8
+  },
+  {
+   "code": "314300001009",
+   "name": "习近平新时代中国特色社会主义思想概论",
+   "credits": 3.0,
+   "category_code": "POL",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 8
+  },
+  {
+   "code": "3143009104",
+   "name": "形势与政策（一）",
+   "credits": 1.0,
+   "category_code": "POL",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 2
+  },
+  {
+   "code": "310300001018",
+   "name": "微积分B（1）",
+   "credits": 4.0,
+   "category_code": "PUB_MATH",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 1
+  },
+  {
+   "code": "310300001033",
+   "name": "微积分B（2）",
+   "credits": 4.0,
+   "category_code": "PUB_MATH",
+   "nature": "必修",
+   "sem_from": 2,
+   "sem_to": 2
+  },
+  {
+   "code": "310300001026",
+   "name": "线性代数与线性规划",
+   "credits": 4.0,
+   "category_code": "PUB_MATH",
+   "nature": "必修",
+   "sem_from": 3,
+   "sem_to": 3
+  },
+  {
+   "code": "310300001022",
+   "name": "概率论与数理统计",
+   "credits": 3.0,
+   "category_code": "PUB_MATH",
+   "nature": "必修",
+   "sem_from": 3,
+   "sem_to": 3
+  },
+  {
+   "code": "3173009119",
+   "name": "Python语言程序设计",
+   "credits": 2.0,
+   "category_code": "PUB_IT",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 1
+  },
+  {
+   "code": "307300007045",
+   "name": "工程基础",
+   "credits": 1.0,
+   "category_code": "PUB_ENG",
+   "nature": "必修",
+   "sem_from": 2,
+   "sem_to": 2
+  },
+  {
+   "code": "9093009904",
+   "name": "军事理论",
+   "credits": 2.0,
+   "category_code": "PUB_MIL",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 1
+  },
+  {
+   "code": "315300008006",
+   "name": "劳动教育与实践",
+   "credits": 2.0,
+   "category_code": "PEAL_LAB",
+   "nature": "必修",
+   "sem_from": 5,
+   "sem_to": 5
+  },
+  {
+   "code": "3113009824",
+   "name": "写作与沟通",
+   "credits": 1.0,
+   "category_code": "GE",
+   "nature": "指定选修",
+   "sem_from": 1,
+   "sem_to": 8
+  },
+  {
+   "code": "9093009774",
+   "name": "大学生创新创业基础",
+   "credits": 1.0,
+   "category_code": "GE",
+   "nature": "指定选修",
+   "sem_from": 1,
+   "sem_to": 1
+  },
+  {
+   "code": "202300006005",
+   "name": "大学生心理发展与指导",
+   "credits": 1.0,
+   "category_code": "GE",
+   "nature": "指定选修",
+   "sem_from": 2,
+   "sem_to": 2
+  },
+  {
+   "code": "3063000003",
+   "name": "微观经济学",
+   "credits": 4.0,
+   "category_code": "MAJOR_PLAT",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 1
+  },
+  {
+   "code": "315300007022",
+   "name": "管理学原理",
+   "credits": 2.0,
+   "category_code": "MAJOR_PLAT",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 1
+  },
+  {
+   "code": "3063000005",
+   "name": "宏观经济学",
+   "credits": 3.0,
+   "category_code": "MAJOR_PLAT",
+   "nature": "必修",
+   "sem_from": 2,
+   "sem_to": 2
+  },
+  {
+   "code": "315300007025",
+   "name": "公共管理学",
+   "credits": 2.0,
+   "category_code": "MAJOR_PLAT",
+   "nature": "必修",
+   "sem_from": 2,
+   "sem_to": 2
+  },
+  {
+   "code": "3153009225",
+   "name": "公共管理学科导论",
+   "credits": 1.0,
+   "category_code": "MAJOR_PLAT",
+   "nature": "必修",
+   "sem_from": 2,
+   "sem_to": 2
+  },
+  {
+   "code": "315300007024",
+   "name": "土地信息系统",
+   "credits": 2.0,
+   "category_code": "MAJOR_CORE",
+   "nature": "必修",
+   "sem_from": 4,
+   "sem_to": 4
+  },
+  {
+   "code": "3063009290",
+   "name": "生态经济学",
+   "credits": 2.0,
+   "category_code": "MAJOR_CORE",
+   "nature": "必修",
+   "sem_from": 4,
+   "sem_to": 4
+  },
+  {
+   "code": "315300007027",
+   "name": "土地资源学",
+   "credits": 2.0,
+   "category_code": "MAJOR_CORE",
+   "nature": "必修",
+   "sem_from": 5,
+   "sem_to": 5
+  },
+  {
+   "code": "3063009250",
+   "name": "土地经济学",
+   "credits": 3.0,
+   "category_code": "MAJOR_CORE",
+   "nature": "必修",
+   "sem_from": 5,
+   "sem_to": 5
+  },
+  {
+   "code": "315300009001",
+   "name": "土地管理学",
+   "credits": 3.0,
+   "category_code": "MAJOR_CORE",
+   "nature": "必修",
+   "sem_from": 5,
+   "sem_to": 5
+  },
+  {
+   "code": "315300007029",
+   "name": "土地管理学A实验",
+   "credits": 1.0,
+   "category_code": "MAJOR_CORE",
+   "nature": "必修",
+   "sem_from": 5,
+   "sem_to": 5
+  },
+  {
+   "code": "315300007041",
+   "name": "不动产估价",
+   "credits": 2.0,
+   "category_code": "MAJOR_CORE",
+   "nature": "必修",
+   "sem_from": 5,
+   "sem_to": 5
+  },
+  {
+   "code": "315300007030",
+   "name": "土地利用规划",
+   "credits": 3.0,
+   "category_code": "MAJOR_CORE",
+   "nature": "必修",
+   "sem_from": 6,
+   "sem_to": 6
+  },
+  {
+   "code": "315300009002",
+   "name": "土地利用规划A实验",
+   "credits": 1.0,
+   "category_code": "MAJOR_CORE",
+   "nature": "必修",
+   "sem_from": 6,
+   "sem_to": 6
+  },
+  {
+   "code": "315300007111",
+   "name": "地图绘制",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 1,
+   "sem_to": 1
+  },
+  {
+   "code": "315300007023",
+   "name": "公共关系与现代礼仪",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 1,
+   "sem_to": 1
+  },
+  {
+   "code": "315300007124",
+   "name": "测量学",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 3,
+   "sem_to": 3
+  },
+  {
+   "code": "315300009010",
+   "name": "测量学A实验",
+   "credits": 1.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 3,
+   "sem_to": 3
+  },
+  {
+   "code": "315300007136",
+   "name": "社会统计与R语言",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 4,
+   "sem_to": 4
+  },
+  {
+   "code": "3063009289",
+   "name": "经济地理学",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 3,
+   "sem_to": 3
+  },
+  {
+   "code": "315300007037",
+   "name": "公共经济学",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 3,
+   "sem_to": 3
+  },
+  {
+   "code": "3153009227",
+   "name": "组织行为学",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 3,
+   "sem_to": 3
+  },
+  {
+   "code": "315300007112",
+   "name": "建筑制图与识图",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 3,
+   "sem_to": 3
+  },
+  {
+   "code": "315300009007",
+   "name": "工程设计",
+   "credits": 1.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 4,
+   "sem_to": 4
+  },
+  {
+   "code": "315300007033",
+   "name": "土地政策学",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 4,
+   "sem_to": 4
+  },
+  {
+   "code": "3063009394",
+   "name": "土地资源遥感",
+   "credits": 3.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 4,
+   "sem_to": 4
+  },
+  {
+   "code": "315300009003",
+   "name": "土地资源遥感实验",
+   "credits": 1.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 4,
+   "sem_to": 4
+  },
+  {
+   "code": "315300007110",
+   "name": "建筑工程概预算",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 4,
+   "sem_to": 4
+  },
+  {
+   "code": "3063009240",
+   "name": "环境与资源经济学",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 4,
+   "sem_to": 4
+  },
+  {
+   "code": "315300007036",
+   "name": "城市与房地产经济学",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 4,
+   "sem_to": 4
+  },
+  {
+   "code": "315300007038",
+   "name": "土地法学",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 5,
+   "sem_to": 5
+  },
+  {
+   "code": "315300007096",
+   "name": "三维空间信息采集处理及建模(校企合作",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 5,
+   "sem_to": 5
+  },
+  {
+   "code": "3063009404",
+   "name": "土地数据分析与建模",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 5,
+   "sem_to": 5
+  },
+  {
+   "code": "315300007039",
+   "name": "城镇规划",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 5,
+   "sem_to": 5
+  },
+  {
+   "code": "3063009341",
+   "name": "城市土地开发(校企合作",
+   "credits": 1.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 5,
+   "sem_to": 5
+  },
+  {
+   "code": "315300007040",
+   "name": "农田水利",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 5,
+   "sem_to": 5
+  },
+  {
+   "code": "315300007042",
+   "name": "土地利用科学的GIS实践",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 6,
+   "sem_to": 6
+  },
+  {
+   "code": "315300007043",
+   "name": "房地产项目策划",
+   "credits": 1.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 6,
+   "sem_to": 6
+  },
+  {
+   "code": "315300007044",
+   "name": "生态经济与绿色发展",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 6,
+   "sem_to": 6
+  },
+  {
+   "code": "315300007083",
+   "name": "智能建造与创新管理",
+   "credits": 1.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 6,
+   "sem_to": 6
+  },
+  {
+   "code": "315300007046",
+   "name": "房地产投资分析与实务（校企合作）",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 6,
+   "sem_to": 6
+  },
+  {
+   "code": "3063009270",
+   "name": "土地资源管理发展趋势",
+   "credits": 1.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 7,
+   "sem_to": 7
+  },
+  {
+   "code": "315300007088",
+   "name": "物业资产运营管理",
+   "credits": 1.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 7,
+   "sem_to": 7
+  },
+  {
+   "code": "315300009008",
+   "name": "土地管理软件应用",
+   "credits": 2.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 7,
+   "sem_to": 7
+  },
+  {
+   "code": "3153009301",
+   "name": "国土空间规划专题",
+   "credits": 1.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 7,
+   "sem_to": 7
+  },
+  {
+   "code": "3063009905",
+   "name": "毕业论文写作与学术道德规范",
+   "credits": 1.0,
+   "category_code": "MAJOR_ELEC",
+   "nature": "选修",
+   "sem_from": 7,
+   "sem_to": 7
+  },
+  {
+   "code": "315300007048",
+   "name": "科技写作",
+   "credits": 1.0,
+   "category_code": "MAJOR_INTL",
+   "nature": "选修",
+   "sem_from": 5,
+   "sem_to": 5
+  },
+  {
+   "code": "315300007049",
+   "name": "可持续发展",
+   "credits": 1.0,
+   "category_code": "MAJOR_INTL",
+   "nature": "选修",
+   "sem_from": 6,
+   "sem_to": 6
+  },
+  {
+   "code": "315300007050",
+   "name": "规划理论与实践",
+   "credits": 1.0,
+   "category_code": "MAJOR_INTL",
+   "nature": "选修",
+   "sem_from": 7,
+   "sem_to": 7
+  },
+  {
+   "code": "315300007051",
+   "name": "空间统计与空间分析",
+   "credits": 1.0,
+   "category_code": "MAJOR_INTL",
+   "nature": "选修",
+   "sem_from": 7,
+   "sem_to": 7
+  },
+  {
+   "code": "9093009905",
+   "name": "军事技能",
+   "credits": 2.0,
+   "category_code": "PRAC",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 8
+  },
+  {
+   "code": "3143009105",
+   "name": "形势与政策（二）",
+   "credits": 1.0,
+   "category_code": "PRAC",
+   "nature": "必修",
+   "sem_from": 3,
+   "sem_to": 8
+  },
+  {
+   "code": "9093009903",
+   "name": "社会实践",
+   "credits": 1.0,
+   "category_code": "PRAC",
+   "nature": "必修",
+   "sem_from": 3,
+   "sem_to": 4
+  },
+  {
+   "code": "110300008002",
+   "name": "美育实践",
+   "credits": 1.0,
+   "category_code": "PRAC",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 8
+  },
+  {
+   "code": "9093009906",
+   "name": "创新创业实践",
+   "credits": 1.0,
+   "category_code": "PRAC",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 7
+  },
+  {
+   "code": "202300008001",
+   "name": "大学生心理素质拓展",
+   "credits": 1.0,
+   "category_code": "PRAC",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 8
+  },
+  {
+   "code": "110300008001",
+   "name": "志愿服务",
+   "credits": 1.0,
+   "category_code": "PRAC",
+   "nature": "必修",
+   "sem_from": 5,
+   "sem_to": 6
+  },
+  {
+   "code": "315300008019",
+   "name": "测量学实习",
+   "credits": 2.0,
+   "category_code": "PRAC",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 8
+  },
+  {
+   "code": "315300008001",
+   "name": "不动产估价技能实训与仿真",
+   "credits": 1.0,
+   "category_code": "PRAC",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 8
+  },
+  {
+   "code": "315300008025",
+   "name": "土地利用规划综合实习",
+   "credits": 1.0,
+   "category_code": "PRAC",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 8
+  },
+  {
+   "code": "3153009930",
+   "name": "教学实习",
+   "credits": 2.0,
+   "category_code": "PRAC",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 8
+  },
+  {
+   "code": "3153009931",
+   "name": "毕业实习",
+   "credits": 2.0,
+   "category_code": "PRAC",
+   "nature": "必修",
+   "sem_from": 1,
+   "sem_to": 8
+  },
+  {
+   "code": "3153009932",
+   "name": "毕业论文（设计）",
+   "credits": 6.0,
+   "category_code": "PRAC",
+   "nature": "必修",
+   "sem_from": 7,
+   "sem_to": 8
+  }
+ ]
+}

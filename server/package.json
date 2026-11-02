@@ -1,0 +1,16 @@
+{
+  "name": "score-system-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "学涯拼图 · 本机部署后端（Node.js + MySQL 8，零框架）",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "initdb": "node bootstrap.js"
+  },
+  "dependencies": {
+    "mysql2": "^3.24.6",
+    "nodemailer": "^6.9.16"
+  }
+}

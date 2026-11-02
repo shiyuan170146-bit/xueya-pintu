@@ -1,0 +1,14 @@
+# 本机密钥与配置（绝不入库）
+server/db.local.txt
+server/.secret.key
+
+# 依赖
+server/node_modules/
+
+# 附属独立项目（数独教练另见 juanjuanyang-sudoku 仓库）
+sudoku/
+
+# 系统与临时文件
+Thumbs.db
+.DS_Store
+*.log
