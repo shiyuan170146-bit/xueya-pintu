@@ -124,11 +124,16 @@ function serveStatic(req, res, pathname) {
 }
 
 /* ---------------- 登录态 ---------------- */
-function currentUser(req) {
+function currentAuth(req) {
   const h = req.headers['authorization'] || ''
   const m = /^Bearer\s+(.+)$/i.exec(h)
   if (!m) return null
-  return auth.verifyToken(m[1])
+  return auth.verifyTokenMeta(m[1])
+}
+
+function currentUser(req) {
+  const me = currentAuth(req)
+  return me ? me.uid : null
 }
 
 /* 令牌签名有效 ≠ 账号还在：users 行被删后（清库/删号），旧令牌必须当场作废，
@@ -181,8 +186,9 @@ function buildOrderLimit(table, order, limit, range, params) {
   return sql
 }
 
-async function dbOp(uid, profile, table, op, body) {
+async function dbOp(uid, profile, table, op, body, isDemo) {
   if (!TABLES[table]) throw new Error('未知数据表：' + table)
+  if (isDemo && op !== 'select') throw new Error('演示模式为只读，不能修改数据')
   const role = profile ? profile.role : null
   const isWrite = op !== 'select'
   if (isWrite) {
@@ -196,6 +202,12 @@ async function dbOp(uid, profile, table, op, body) {
       const filters = (body.filters || []).slice()
       const ownerCol = OWNER_ONLY[table]
       if (ownerCol) filters.push({ col: ownerCol, op: 'eq', val: uid })
+      /* 行级归属强制：scores/students 按学号归属（本人只能读自己的行），其余为共享参考表 */
+      const sid = profile && profile.student_id ? String(profile.student_id) : null
+      if ((table === 'scores' || table === 'students')) {
+        if (!sid) return []
+        filters.push({ col: 'student_id', op: 'eq', val: sid })
+      }
       const sql = `SELECT * FROM ${ident(table)}` + buildWhere(table, filters, params)
         + buildOrderLimit(table, body.order, body.limit, body.range, params)
       const [rows] = await conn.query(sql, params)
@@ -210,6 +222,12 @@ async function dbOp(uid, profile, table, op, body) {
         if (table === 'user_profiles') o.owner_id = uid
         return o
       })
+      /* scores 写入强制归属本人学号，防止越权写入他人成绩 */
+      const mySid = profile && profile.student_id ? String(profile.student_id) : null
+      if (table === 'scores') {
+        if (!mySid) throw new Error('当前身份未绑定学号，不能写入成绩')
+        rows = rows.map((row) => ({ ...row, student_id: mySid }))
+      }
       const cols = [...new Set(rows.flatMap((r) => checkColumns(table, Object.keys(r))))]
       if (!cols.length) throw new Error('没有可写入的字段')
       const params = []
@@ -253,6 +271,12 @@ async function dbOp(uid, profile, table, op, body) {
       }
       const keys = Object.keys(vals)
       if (!keys.length) throw new Error('没有可更新的字段')
+      /* scores 更新强制限定本人学号的行 */
+      const mySidU = profile && profile.student_id ? String(profile.student_id) : null
+      if (table === 'scores') {
+        if (!mySidU) throw new Error('当前身份未绑定学号')
+        body.filters = (body.filters || []).concat([{ col: 'student_id', op: 'eq', val: mySidU }])
+      }
       const whereParams = []
       const whereSql = buildWhere(table, body.filters, whereParams)
       if (!whereSql) throw new Error('更新操作必须带条件')
@@ -270,6 +294,12 @@ async function dbOp(uid, profile, table, op, body) {
     }
 
     if (op === 'delete') {
+      /* scores 删除强制限定本人学号的行 */
+      const mySidD = profile && profile.student_id ? String(profile.student_id) : null
+      if (table === 'scores') {
+        if (!mySidD) throw new Error('当前身份未绑定学号')
+        body.filters = (body.filters || []).concat([{ col: 'student_id', op: 'eq', val: mySidD }])
+      }
       const params = []
       const whereSql = buildWhere(table, body.filters, params)
       if (!whereSql) throw new Error('删除操作必须带条件')
@@ -299,6 +329,13 @@ const RPCS = {
   batch_update_score_gp: (p) => ({ proc: 'sp_batch_update_score_gp', args: [JSON.stringify((p.p_ids || []).map(Number)), p.p_count_gp], json: true }),
   batch_delete_scores: (p) => ({ proc: 'sp_batch_delete_scores', args: [JSON.stringify((p.p_ids || []).map(Number))], json: true }),
 }
+
+/* 演示模式下禁止调用的写入类接口（读接口不受限；admin_* 由角色校验拦截） */
+const WRITE_RPCS = new Set([
+  'register_identity', 'import_student_courses', 'save_student_score',
+  'update_student_score', 'delete_student_score', 'batch_update_score_gp',
+  'batch_delete_scores', 'archive_arrangement',
+])
 
 async function runRpc(conn, proc, args) {
   const marks = args.map(() => '?').join(',')
@@ -334,6 +371,37 @@ async function handle(req, res) {
   }
 
   if (p === '/api/auth/logout') return json(res, 200, { data: {} })
+
+  /* 演示模式：免注册一键进入只读演示账号（供同学/老师/面试官参观，写入一律被拒）。
+     演示学籍首次使用时复制一份吴胜男（2024315220127）的成绩作展示数据。 */
+  if (p === '/api/auth/demo' && req.method === 'POST') {
+    const DEMO_UID = 'u_demo_public'
+    const DEMO_SID = '9900000000001'
+    await query(
+      `INSERT INTO users (id, email, pass_hash) VALUES (?, ?, ?)
+       ON DUPLICATE KEY UPDATE email = VALUES(email)`,
+      [DEMO_UID, 'demo@xueyapintu.local', '!demo-no-login'])
+    await query(
+      `INSERT INTO user_profiles (owner_id, real_name, role, student_id, demo_mode)
+       VALUES (?, '演示同学', 'student', ?, 1)
+       ON DUPLICATE KEY UPDATE role = 'student', student_id = VALUES(student_id), demo_mode = 1, real_name = VALUES(real_name)`,
+      [DEMO_UID, DEMO_SID])
+    await query(
+      `INSERT INTO students (student_id, name, class_name, major_name, gender, enroll_year)
+       VALUES (?, '演示同学', '信管2401', '信息管理与信息系统', '女', 2024)
+       ON DUPLICATE KEY UPDATE name = VALUES(name), class_name = VALUES(class_name), major_name = VALUES(major_name)`,
+      [DEMO_SID])
+    const cnt = await query('SELECT COUNT(*) AS c FROM scores WHERE student_id = ?', [DEMO_SID])
+    if (!(cnt.rows[0] && cnt.rows[0].c)) {
+      await query(
+        `INSERT INTO scores (student_id, arrange_id, usual_score, exam_score, total_score, gp, count_gp, status)
+         SELECT ?, arrange_id, usual_score, exam_score, total_score, gp, count_gp, status
+           FROM scores WHERE student_id = '2024315220127'`,
+        [DEMO_SID])
+    }
+    const profile = await getProfile(DEMO_UID)
+    return json(res, 200, { data: { session: { user: { id: DEMO_UID }, profile }, token: auth.signToken(DEMO_UID, { demo: true }) } })
+  }
 
   if (p === '/api/auth/send-otp' && req.method === 'POST') {
     const target = body.email ? { email: body.email } : { phone: body.phone }
@@ -395,19 +463,24 @@ async function handle(req, res) {
   }
 
   /* ---- 以下都需要登录（含账号仍存在校验） ---- */
-  const uid = currentUser(req)
+  const me = currentAuth(req)
+  const uid = me && me.uid
+  const isDemo = !!(me && me.demo)
   if (!uid || !(await liveUser(uid))) return json(res, 401, { error: { message: '登录已过期，请重新登录' } })
   const profile = await getProfile(uid)
 
   if (p.startsWith('/api/db/')) {
     const [, , , table, op] = p.split('/')
-    const rows = await dbOp(uid, profile, table, op, body)
+    const rows = await dbOp(uid, profile, table, op, body, isDemo)
     return json(res, 200, { data: rows })
   }
 
   if (p.startsWith('/api/rpc/')) {
     const fn = p.split('/')[3]
     const params = body.params || body || {}
+
+    /* 演示模式：写入类接口一律拒绝 */
+    if (isDemo && WRITE_RPCS.has(fn)) return json(res, 200, { error: { message: '演示模式为只读，不能修改数据' } })
 
     /* 归档开课：更新归档标志 + 清理失去引用的占位课程 */
     if (fn === 'archive_arrangement') {

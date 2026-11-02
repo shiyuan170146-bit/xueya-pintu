@@ -34,13 +34,16 @@ function verifyPassword(pw, stored) {
 
 const TOKEN_TTL = 7 * 24 * 3600 * 1000
 
-function signToken(uid) {
-  const payload = Buffer.from(JSON.stringify({ uid, exp: Date.now() + TOKEN_TTL })).toString('base64url')
+function signToken(uid, opts) {
+  const obj = { uid, exp: Date.now() + TOKEN_TTL }
+  if (opts && opts.demo) obj.demo = 1
+  const payload = Buffer.from(JSON.stringify(obj)).toString('base64url')
   const sig = crypto.createHmac('sha256', secret()).update(payload).digest('base64url')
   return `${payload}.${sig}`
 }
 
-function verifyToken(token) {
+/* 返回完整令牌元信息：{ uid, demo }；verifyToken 保留旧行为（只返回 uid） */
+function verifyTokenMeta(token) {
   try {
     const [payload, sig] = String(token).split('.')
     if (!payload || !sig) return null
@@ -48,8 +51,13 @@ function verifyToken(token) {
     if (!crypto.timingSafeEqual(Buffer.from(sig), Buffer.from(expect))) return null
     const obj = JSON.parse(Buffer.from(payload, 'base64url').toString('utf8'))
     if (!obj.uid || !obj.exp || obj.exp < Date.now()) return null
-    return obj.uid
+    return { uid: obj.uid, demo: obj.demo === 1 }
   } catch (e) { return null }
+}
+
+function verifyToken(token) {
+  const m = verifyTokenMeta(token)
+  return m ? m.uid : null
 }
 
 function newUserId() {
@@ -189,7 +197,7 @@ function checkResetCode(target, token) {
 }
 
 module.exports = {
-  hashPassword, verifyPassword, signToken, verifyToken, newUserId,
+  hashPassword, verifyPassword, signToken, verifyToken, verifyTokenMeta, newUserId,
   ensureUsersTable, findUser, createUser, sendOtp, checkOtp,
   smtpReal: () => SMTP_REAL, sendResetCode, checkResetCode, updatePassword,
 }

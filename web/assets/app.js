@@ -604,6 +604,16 @@ $('formOtp').addEventListener('submit', async (e) => {
   })
 })
 
+/* 演示模式：免注册一键进入只读演示账号（面试/参观用，数据为演示学籍的预置成绩） */
+$('linkDemo').addEventListener('click', async () => {
+  await guard(async () => {
+    authMsg('正在进入演示模式…', true)
+    const r = await cloud.auth.demoLogin()
+    if (r.error) return authMsg(r.error.message || '演示进入失败，请稍后再试', false)
+    await afterLogin()
+  })
+})
+
 $('btnFgSend').addEventListener('click', async () => {
   await guard(async () => {
     const email = $('fgEmail').value.trim()
@@ -653,9 +663,11 @@ function enterApp() {
   if (!p) { showView('loginView'); return }
   showView('appView')
   $('userName').textContent = p.real_name || ''
-  $('userBadge').textContent = p.role === 'admin'
-    ? (p.student_id ? '学号 ' + p.student_id + ' · 管理员' : '管理员')
-    : p.student_id ? ('学号 ' + p.student_id) : '学生'
+  $('userBadge').textContent = p.demo_mode
+    ? '演示模式 · 只读'
+    : (p.role === 'admin'
+      ? (p.student_id ? '学号 ' + p.student_id + ' · 管理员' : '管理员')
+      : p.student_id ? ('学号 ' + p.student_id) : '学生')
   /* 纯管理员（role=admin 且未绑学号）只做后台管理，侧栏精简为「管理」组，
      不显示学生端的学业页面（那些页面依赖学生身份/方案，对纯管理员无意义） */
   const pureAdmin = p.role === 'admin' && !p.student_id
@@ -1610,7 +1622,10 @@ function guessEnrollYear(sid) {
 async function baseData() {
   let me = null
   try {
-    const list = await dbSelect('students')
+    /* 服务端已强制 scores/students 行级归属；这里按自己学号精确取一行 */
+    const list = state.profile?.student_id
+      ? await dbSelect('students', { eq: { student_id: state.profile.student_id } })
+      : []
     me = list.find(s => s.student_id === state.profile?.student_id) || null
   } catch (e) { /* 无权读名册时忽略 */ }
   state.planMajor = me?.major_name || ''   // 供后续 loadPlan() 复用同一专业的方案

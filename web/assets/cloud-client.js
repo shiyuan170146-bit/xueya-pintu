@@ -106,6 +106,16 @@
             return { data: r2.data }
           } } }
         },
+        async demoLogin() {
+          /* 演示模式：免注册进入只读演示账号 */
+          const r = await call('/api/auth/demo', {})
+          if (r.error) return r
+          if (r.data && r.data.token) {
+            setToken(r.data.token)
+            notify('SIGNED_IN', r.data.session)
+          }
+          return { data: r.data }
+        },
         async signOut() {
           await call('/api/auth/logout', {})
           setToken(null)
