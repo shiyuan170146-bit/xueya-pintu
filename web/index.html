@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>学涯拼图 · 培养方案与选课提醒</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M6 6 H26 a7 7 0 0 1 14 0 H58 V26 a7 7 0 0 1 0 14 V58 H6 Z' fill='%237b915c' stroke='%234a4535' stroke-width='4' stroke-linejoin='round'/%3E%3C/svg%3E" />
-<link rel="stylesheet" href="assets/app.css?v=20261022d" />
+<link rel="stylesheet" href="assets/app.css?v=20261103a" />
 </head>
 <body>
 <!-- WorkBuddy 云服务 SDK（本地 vendor，避免外网 CDN 被墙）：提供 window.WorkBuddyCloud -->
@@ -14,7 +14,7 @@
 <script defer src="assets/vendor/xlsx.full.min.js"></script>
 <!-- pdf.js：直接读教务系统导出的 PDF（成绩单 / 正在修读课表），本地 vendor 离线可用 -->
 <script defer src="assets/vendor/pdf.min.js"></script>
-<script defer src="assets/pdf-import.js?v=20261022d"></script>
+<script defer src="assets/pdf-import.js?v=20261103a"></script>
 
 <!-- ============ 手绘 SVG 符号库（装饰用） ============ -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -65,7 +65,7 @@
         <label>邮箱<input type="text" id="pwdEmail" required placeholder="you@example.com" /></label>
         <label>密码<input type="password" id="pwdPass" required placeholder="登录密码" /></label>
         <button type="submit" class="btn primary block">登 录</button>
-        <button type="button" class="btn block" id="btnDemo">先看看示例（不用注册）</button>
+        <button type="button" class="btn block" id="btnDemo">不注册，先进去看看</button>
       </form>
 
       <!-- 验证码注册 / 登录（仅邮箱：短信通道未开通） -->
@@ -97,7 +97,7 @@
       </form>
 
       <!-- 视图间跳转小字（登录 / 注册 / 忘记密码） -->
-      <p class="auth-links" id="linksLogin">第一次使用？<a href="javascript:void(0)" id="linkToOtp">去注册</a><span class="sep">·</span><a href="javascript:void(0)" id="linkToForgot">忘记密码？</a><span class="sep">·</span><a href="javascript:void(0)" id="linkDemo" style="font-weight:600">先逛逛（演示数据 · 只读）</a></p>
+      <p class="auth-links" id="linksLogin">第一次使用？<a href="javascript:void(0)" id="linkToOtp">去注册</a><span class="sep">·</span><a href="javascript:void(0)" id="linkToForgot">忘记密码？</a></p>
       <p class="auth-links hidden" id="linksOtp">已有账号？<a href="javascript:void(0)" id="linkBackLogin1">返回登录</a></p>
       <p class="auth-links hidden" id="linksForgot"><a href="javascript:void(0)" id="linkBackLogin2">返回登录</a></p>
 
@@ -141,6 +141,6 @@
 <div id="modalMask" class="modal-mask hidden"><div id="modalBox" class="modal-box"></div></div>
 <div id="loading" class="loading hidden">加载中…</div>
 
-<script defer src="assets/app.js?v=20261023a"></script>
+<script defer src="assets/app.js?v=20261103a"></script>
 </body>
 </html>

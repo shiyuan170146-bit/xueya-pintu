@@ -618,7 +618,6 @@ async function enterDemo() {
     if (!ok) return authMsg('演示进入失败，请稍后再试', false)
   })
 }
-$('linkDemo').addEventListener('click', enterDemo)
 $('btnDemo').addEventListener('click', enterDemo)
 
 $('btnFgSend').addEventListener('click', async () => {
