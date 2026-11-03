@@ -605,14 +605,21 @@ $('formOtp').addEventListener('submit', async (e) => {
 })
 
 /* 演示模式：免注册一键进入只读演示账号（面试/参观用，数据为演示学籍的预置成绩） */
-$('linkDemo').addEventListener('click', async () => {
+async function demoSignIn() {
+  const r = await cloud.auth.demoLogin()
+  if (r.error) return false
+  await afterLogin()
+  return true
+}
+async function enterDemo() {
   await guard(async () => {
     authMsg('正在进入演示模式…', true)
-    const r = await cloud.auth.demoLogin()
-    if (r.error) return authMsg(r.error.message || '演示进入失败，请稍后再试', false)
-    await afterLogin()
+    const ok = await demoSignIn()
+    if (!ok) return authMsg('演示进入失败，请稍后再试', false)
   })
-})
+}
+$('linkDemo').addEventListener('click', enterDemo)
+$('btnDemo').addEventListener('click', enterDemo)
 
 $('btnFgSend').addEventListener('click', async () => {
   await guard(async () => {
@@ -3534,6 +3541,11 @@ async function boot() {
   showView('loginView')
   const { data: session } = await cloud.auth.getSession()
   if (session) { try { await afterLogin() } catch (e) { showView('loginView') } }
+  else if (new URLSearchParams(location.search).get('demo') === '1') {
+    /* ?demo=1 直达演示模式（README/主页外链用）：无已登录 token 才自动进，失败安静回落登录页 */
+    try { await demoSignIn() } catch (e) { showView('loginView') }
+    try { history.replaceState(null, '', location.pathname) } catch (e) {}
+  }
   cloud.auth.onAuthStateChange((event) => {
     if (event === 'SIGNED_OUT') { state.profile = null; planCache = null; state.planMajor = ''; state.importDraft = null; showView('loginView') }
   })
