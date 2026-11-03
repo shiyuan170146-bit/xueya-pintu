@@ -119,3 +119,7 @@ mysql -u root -p --default-character-set=utf8mb4 < server/sql/score_db_mysql.sql
 - **重置数据**：重新运行 `init-db.bat`（脚本会重建 `score_db`，原有数据将被清空）。
 - **局域网访问**：把 `server/index.js` 中的监听地址由 `127.0.0.1` 改为 `0.0.0.0`，
   并在系统防火墙放行端口。
+
+## 七、许可证
+
+本项目基于 [MIT License](LICENSE) 开源，欢迎学习、引用与二次开发。
