@@ -1,6 +1,8 @@
 # 学涯拼图 · 培养方案与选课提醒（学生端）
 
 > **代码托管**：[GitHub](https://github.com/shiyuan170146-bit/xueya-pintu)　·　[Gitee 镜像（国内访问更快）](https://gitee.com/wu-shengnan-2025/xueya-pintu)
+>
+> **在线演示**：[点开即看](http://42.194.145.229/?demo=1)（免注册，只读演示数据）
 
 ![学涯拼图 · 我的进度](docs/preview-dashboard.png)
 
